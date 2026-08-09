@@ -15,7 +15,7 @@ import { Marquee } from "./components/Marquee";
 
 const NAV = [
   { id: "tentang", label: "Tentang" },
-  { id: "maskot", label: "Astro" },
+  { id: "maskot", label: "Orbi" },
   { id: "kunci-orbit", label: "Kunci Orbit" },
   { id: "galeri", label: "Galeri" },
   { id: "kontak", label: "Kontak" },
