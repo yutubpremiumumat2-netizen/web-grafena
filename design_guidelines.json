@@ -1,0 +1,85 @@
+{
+  "project_name": "GRAFENA 2026 Landing Page",
+  "theme_concept": "Journey from Earth to outer space (alone -> part of a cohort)",
+  "tagline": "Datang sebagai seseorang yang sendirian, dan pulang sebagai bagian dari sebuah angkatan.",
+  "art_direction": "Aurora Dreamy - soft dreamy aurora gradients mixing purple, pink, blue, teal. Progressive gradient shift from Earth (warm) to deep space (cool). Playful, modern, round/orbit elements.",
+  "typography": {
+    "font_families": {
+      "heading": "'Fredoka', sans-serif",
+      "body": "'Poppins', sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight",
+      "h2": "text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "body": "text-base sm:text-lg leading-relaxed",
+      "small": "text-sm tracking-wide uppercase"
+    },
+    "import_instruction": "Import Fredoka and Poppins fonts from Google Fonts in index.css"
+  },
+  "colors": {
+    "progressive_gradients": {
+      "section_1_hero_earth": "bg-gradient-to-b from-[#FFDAB9] via-[#FFC0CB] to-[#E6E6FA]",
+      "section_2_about_atmosphere": "bg-gradient-to-b from-[#E6E6FA] via-[#B0C4DE] to-[#87CEEB]",
+      "section_3_mascot_orbit": "bg-gradient-to-b from-[#87CEEB] via-[#20B2AA] to-[#9370DB]",
+      "section_4_gates_deep_space": "bg-gradient-to-b from-[#9370DB] via-[#483D8B] to-[#191970]",
+      "section_5_gallery_abyss": "bg-gradient-to-b from-[#191970] to-[#0A0A1A]",
+      "section_6_footer_void": "bg-[#0A0A1A]"
+    },
+    "text": {
+      "hero_light_bg": "text-slate-900",
+      "space_dark_bg": "text-white",
+      "accent": "text-[#4CC9F0]"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-24 sm:py-32",
+    "mobile_first": "Start with grid-cols-1, scale up to md:grid-cols-2 or lg:grid-cols-3. Images max-h-[80vh] on mobile.",
+    "generous_spacing": "Use p-8 to p-12 for bento boxes to give breathing room."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-white/10 border border-white/20 shadow-lg",
+    "decorations": "Use decorative SVG stars, small floating CSS/image planets, and dashed orbit rings positioned absolutely in the background.",
+    "buttons": "Pill-shaped (rounded-full), aurora gradient background or crisp white, hover scale-105 transition."
+  },
+  "components": {
+    "kunci_orbit_gates": {
+      "locked_state": "Grayscale filter, backdrop-blur-md, bg-white/5, border border-white/10, centered lock icon, muted text opacity-50. Password input visible.",
+      "unlocked_state": "Full vibrant aurora gradient background (e.g., from-[#4361EE] to-[#4CC9F0]), border-[#4CC9F0]/50 glowing, crisp text, vibrant week content revealed."
+    },
+    "gallery_grid": {
+      "layout": "Bento/masonry grid, mix of col-span-1, col-span-2, rounded-3xl overflow-hidden.",
+      "hover": "Group hover zoom effect on image, subtle overlay."
+    },
+    "video_teaser": {
+      "layout": "9:16 vertical aspect ratio container, max-w-sm mx-auto, surrounded by glowing orbit rings."
+    }
+  },
+  "motion": {
+    "libraries": ["framer-motion", "lenis"],
+    "hero_reveal": "Masked line-by-line text reveal using framer-motion (initial { y: '100%', opacity: 0 }).",
+    "parallax": "Use framer-motion useScroll for subtle parallax on background planets/stars.",
+    "marquee": "Slow editorial marquee for tagline using framer-motion."
+  },
+  "media": {
+    "image_urls": {
+      "hero_aurora": "https://images.unsplash.com/photo-1568607689150-17e625c1586e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxhdXJvcmElMjBkcmVhbXklMjBza3l8ZW58MHx8fHwxNzg2MjY3MTM2fDA&ixlib=rb-4.1.0&q=85",
+      "mascot_astro": "https://images.unsplash.com/photo-1722437661983-60e3a0fa954c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwzfHxhc3Ryb25hdXQlMjB0b3l8ZW58MHx8fHwxNzg2MjY3MTQwfDA&ixlib=rb-4.1.0&q=85",
+      "space_planets": "https://images.unsplash.com/photo-1658457459792-f4dfe37407ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxzcGFjZSUyMHBsYW5ldHMlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzg2MjY3MTM1fDA&ixlib=rb-4.1.0&q=85",
+      "gallery_student_1": "https://images.unsplash.com/photo-1663162550974-aaf76bcdeedf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBoYXZpbmclMjBmdW58ZW58MHx8fHwxNzg2MjY3MTM1fDA&ixlib=rb-4.1.0&q=85",
+      "gallery_student_2": "https://images.unsplash.com/photo-1484712401471-05c7215830eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBoYXZpbmclMjBmdW58ZW58MHx8fHwxNzg2MjY3MTM1fDA&ixlib=rb-4.1.0&q=85",
+      "gallery_student_3": "https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBoYXZpbmclMjBmdW58ZW58MHx8fHwxNzg2MjY3MTM1fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use transparent backgrounds for dropdowns, overlays, or navbars.",
+    "Add data-testid attributes to all interactive elements for robust automated testing.",
+    "DO NOT apply universal transitions (e.g., transition: all). Add specific transitions for interactive elements.",
+    "DO NOT center align the app container in App.css (.App { text-align: center; }).",
+    "Use modern pill-shaped or sharp buttons with hover animations.",
+    "Create depth through layered elements with z-index and glassmorphism (12-24px blur).",
+    "Avoid AI slop: no generic centered layouts, use 2-3x generous spacing, apply subtle noise/grain textures.",
+    "Prioritize optical alignment over geometric alignment."
+  ]
+}
