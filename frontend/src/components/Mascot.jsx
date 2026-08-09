@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Reveal } from "./Reveal";
 import { StarField, OrbitRing } from "./Decorations";
 
-const ASTRO_WAVE = "https://static.prod-images.emergentagent.com/jobs/f89c3aee-9bef-4cf3-8466-6d7ea87f037a/images/2945a2e86351b38245a305ac6489ca802b49d9aa4b49166f7f58f3494982e68b.jpeg";
+const ASTRO_WAVE = "https://customer-assets-lqy194kg.emergentagent.net/job_orbit-unlock/artifacts/8dajwirv_ORBI.png";
 
 export const Mascot = () => (
   <section
@@ -19,7 +19,7 @@ export const Mascot = () => (
           <div className="pointer-events-none absolute h-64 w-64 rounded-full bg-[#c05cff] opacity-40 blur-[80px]" />
           <motion.img
             src={ASTRO_WAVE}
-            alt="Astro — maskot astronot chibi GRAFENA"
+            alt="Orbi — maskot astronot GRAFENA"
             data-testid="mascot-image"
             className="float-y relative z-10 w-64 rounded-[2.5rem] border border-white/20 shadow-2xl sm:w-72"
           />
