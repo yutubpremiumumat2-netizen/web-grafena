@@ -96,7 +96,7 @@ function App() {
 
       <main>
         <Hero onStart={() => scrollTo("tentang")} />
-        <Marquee text="DATANG SENDIRIAN · PULANG SEBAGAI SATU ANGKATAN" />
+        <Marquee text="EMBRACE THE PROCESS, ACHIEVE YOUR PROGRESS" />
         <About />
         <Mascot />
         <KunciOrbit />

@@ -74,7 +74,7 @@ export const Hero = ({ onStart }) => {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="font-body text-base leading-relaxed text-white/75 sm:text-lg"
           >
-            "Datang sebagai seseorang yang sendirian, dan pulang sebagai bagian dari sebuah angkatan."
+            "Embrace the Process, Achieve Your Progress"
           </motion.p>
         </div>
 
@@ -92,7 +92,6 @@ export const Hero = ({ onStart }) => {
             Mulai Perjalanan
             <ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
           </button>
-          <p className="text-xs uppercase tracking-widest text-white/50">5 Sep – 24 Okt 2026 · 8 Minggu</p>
         </motion.div>
       </motion.div>
     </section>

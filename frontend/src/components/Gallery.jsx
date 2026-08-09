@@ -169,9 +169,6 @@ export const Gallery = () => {
               </Reveal>
             ))}
         </div>
-        <p className="mt-6 text-center text-xs uppercase tracking-widest text-white/40">
-          {showPlaceholders ? "*Foto placeholder — unggah foto/video asli GRAFENA di atas" : "Momen asli GRAFENA 2026"}
-        </p>
       </div>
     </section>
   );

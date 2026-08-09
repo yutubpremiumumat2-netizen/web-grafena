@@ -69,7 +69,7 @@ export const KunciOrbit = () => {
             Kunci <span className="aurora-text">Orbit</span>
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75">
-            Delapan gerbang orbit menantimu — satu untuk tiap minggu. Buka setiap gerbang dengan kata
+            Delapan gerbang orbit menantimu! Satu untuk tiap minggu. Buka setiap gerbang dengan kata
             sandi mingguan untuk mengungkap misi & outfit. Progres tersimpan otomatis di perangkat ini.
           </p>
         </Reveal>
