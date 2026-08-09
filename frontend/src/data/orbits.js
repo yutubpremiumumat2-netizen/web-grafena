@@ -5,7 +5,7 @@ export const ORBITS = [
     week: 1,
     codename: "MERKURIUS",
     password: "MERKURIUS",
-    title: "Gerbang Perkenalan",
+    title: "Gerbang Bumi",
     dates: "5 – 12 September",
     reveal: {
       title: "Outfit Minggu 1 — Bumi",
@@ -31,7 +31,7 @@ export const ORBITS = [
     week: 3,
     codename: "BUMI",
     password: "BUMI",
-    title: "Gerbang Gravitasi",
+    title: "Gerbang Orbit",
     dates: "20 – 26 September",
     reveal: {
       title: "Outfit Minggu 3 — Orbit",
@@ -44,7 +44,7 @@ export const ORBITS = [
     week: 4,
     codename: "MARS",
     password: "MARS",
-    title: "Gerbang Merah",
+    title: "Gerbang Bulan",
     dates: "27 Sep – 3 Oktober",
     reveal: {
       title: "Outfit Minggu 4 — Mars",
@@ -57,7 +57,7 @@ export const ORBITS = [
     week: 5,
     codename: "JUPITER",
     password: "JUPITER",
-    title: "Gerbang Raksasa",
+    title: "Gerbang Meteor",
     dates: "4 – 10 Oktober",
     reveal: {
       title: "Outfit Minggu 5 — Jupiter",
@@ -70,7 +70,7 @@ export const ORBITS = [
     week: 6,
     codename: "SATURNUS",
     password: "SATURNUS",
-    title: "Gerbang Cincin",
+    title: "Gerbang Galaksi",
     dates: "11 – 17 Oktober",
     reveal: {
       title: "Outfit Minggu 6 — Saturnus",
@@ -83,7 +83,7 @@ export const ORBITS = [
     week: 7,
     codename: "URANUS",
     password: "URANUS",
-    title: "Gerbang Es",
+    title: "Gerbang Nebula",
     dates: "18 – 22 Oktober",
     reveal: {
       title: "Outfit Minggu 7 — Uranus",
@@ -96,7 +96,7 @@ export const ORBITS = [
     week: 8,
     codename: "NEPTUNUS",
     password: "NEPTUNUS",
-    title: "Gerbang Terjauh",
+    title: "Gerbang Bintang",
     dates: "24 Oktober — Puncak",
     reveal: {
       title: "Outfit Minggu 8 — Neptunus",

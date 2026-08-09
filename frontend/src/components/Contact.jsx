@@ -34,14 +34,14 @@ export const Contact = () => (
       <Reveal delay={0.12}>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="https://instagram.com/grafena.unpad"
+            href="https://instagram.com/grafena.himatologika"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="instagram-link"
             className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#f72585] to-[#7209b7] px-7 py-4 font-heading text-base font-medium text-white transition-transform duration-300 hover:scale-105"
           >
             <Instagram className="h-5 w-5" />
-            @grafena.unpad
+            @grafena.himatologika
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
@@ -61,7 +61,6 @@ export const Contact = () => (
       <p className="mt-2 text-xs uppercase tracking-widest text-white/40">
         Teknologi Industri Kimia D4 · Universitas Padjadjaran
       </p>
-      <p className="mt-1 text-xs text-white/30">*Semua tautan & kontak masih placeholder</p>
     </div>
   </section>
 );

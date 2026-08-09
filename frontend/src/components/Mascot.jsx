@@ -37,11 +37,8 @@ export const Mascot = () => (
           di luar angkasa.
         </p>
         <p className="mt-4 text-base leading-relaxed text-white/75">
-          Ikuti Astro, kumpulkan kunci orbit setiap minggu, dan saksikan bagaimana perjalanan yang
+          Ikuti Orbi, kumpulkan kunci orbit setiap minggu, dan saksikan bagaimana perjalanan yang
           dimulai sendirian berakhir sebagai satu angkatan yang utuh.
-        </p>
-        <p className="mt-6 inline-block rounded-full border border-white/15 bg-white/5 px-5 py-2 text-xs uppercase tracking-widest text-white/50">
-          *Nama "Astro" masih placeholder
         </p>
       </Reveal>
     </div>
