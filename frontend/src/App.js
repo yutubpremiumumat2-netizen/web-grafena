@@ -7,6 +7,7 @@ import "@/App.css";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Mascot } from "./components/Mascot";
+import { RevealKelompok } from "./components/RevealKelompok";
 import { KunciOrbit } from "./components/KunciOrbit";
 import { Gallery } from "./components/Gallery";
 import { VideoTeaser } from "./components/VideoTeaser";
@@ -16,6 +17,7 @@ import { Marquee } from "./components/Marquee";
 const NAV = [
   { id: "tentang", label: "Tentang" },
   { id: "maskot", label: "Orbi" },
+  { id: "reveal-kelompok", label: "Kelompok" },
   { id: "kunci-orbit", label: "Kunci Orbit" },
   { id: "galeri", label: "Galeri" },
   { id: "kontak", label: "Kontak" },
@@ -99,6 +101,7 @@ function App() {
         <Marquee text="EMBRACE THE PROCESS, ACHIEVE YOUR PROGRESS" />
         <About />
         <Mascot />
+        <RevealKelompok />
         <KunciOrbit />
         <Gallery />
         <VideoTeaser />
