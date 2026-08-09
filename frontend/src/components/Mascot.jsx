@@ -29,7 +29,7 @@ export const Mascot = () => (
       <Reveal delay={0.15}>
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-[#f72585]">Maskot</p>
         <h2 className="font-heading text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
-          Halo, aku <span className="aurora-text">Astro</span>!
+          Halo, aku <span className="aurora-text">Orbi</span>!
         </h2>
         <p className="mt-6 text-base leading-relaxed text-white/75">
           Astronot chibi ini akan jadi pemandu perjalananmu sepanjang GRAFENA 2026. Ia menemani
