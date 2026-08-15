@@ -4,7 +4,7 @@ import { Users, Sparkles, Rocket } from "lucide-react";
 
 const chapters = [
   { n: "01", icon: Rocket, title: "Sebuah Peluncuran", text: "GRAFENA 2026 adalah acara orientasi mahasiswa baru program studi Teknologi Industri Kimia (TIK) D4 Universitas Padjadjaran — berlangsung 8 pekan, dari 5 September hingga 24 Oktober 2026 (didahului Pramabim 29 Agustus)." },
-  { n: "02", icon: Users, title: "55 Penjelajah", text: "Dirancang untuk sekitar 55 mahasiswa baru TIK D4. Setiap maba memulai perjalanan ini sendiri-sendiri, dari titik yang berbeda." },
+  { n: "02", icon: Users, title: "55 Penjelajah", text: "Dirancang untuk 55 mahasiswa baru TIK D4. Setiap maba memulai perjalanan ini sendiri-sendiri, dari titik yang berbeda." },
   { n: "03", icon: Sparkles, title: "Satu Angkatan", text: "Tujuannya satu: membangun kebersamaan. Selama 8 pekan, jarak dari Bumi ke luar angkasa menjadi metafora perjalanan kalian menjadi satu angkatan yang utuh." },
 ];
 
