@@ -1,6 +1,9 @@
 // GRAFENA 2026 — Pembagian kelompok maba (data asli dari DATA KELOMPOK.xlsx)
 // GANTI: target waktu reveal (WIB / UTC+7)
-export const REVEAL_TARGET = "2026-08-25T18:00:00+07:00";
+export const REVEAL_TARGET = "2026-08-28T18:00:00+07:00";
+
+// GANTI: password akses panitia (override tampilan reveal tanpa menunggu countdown)
+export const PANITIA_PASSWORD = "PANITGRAF2026";
 
 const GRADIENTS = [
   "from-[#4cc9f0] to-[#4361ee]",

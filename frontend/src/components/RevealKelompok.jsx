@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, Users, Sparkles } from "lucide-react";
+import { Lock, Users, Sparkles, X, KeyRound, ShieldCheck } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { StarField, OrbitRing } from "./Decorations";
-import { GROUPS, REVEAL_TARGET, TOTAL_MABA } from "../data/groups";
+import { GROUPS, REVEAL_TARGET, TOTAL_MABA, PANITIA_PASSWORD } from "../data/groups";
 
 const TARGET_MS = new Date(REVEAL_TARGET).getTime();
 
@@ -94,12 +94,32 @@ const RevealView = () => (
 
 export const RevealKelompok = () => {
   const [time, setTime] = useState(getRemaining);
+  const [panitiaUnlocked, setPanitiaUnlocked] = useState(false);
+  const [showPw, setShowPw] = useState(false);
+  const [pw, setPw] = useState("");
+  const [pwError, setPwError] = useState(false);
 
   useEffect(() => {
     if (time.done) return;
     const id = setInterval(() => setTime(getRemaining()), 1000);
     return () => clearInterval(id);
   }, [time.done]);
+
+  // Session-only override (tidak disimpan di localStorage). Reset saat refresh.
+  const revealed = time.done || panitiaUnlocked;
+
+  const submitPw = (e) => {
+    e.preventDefault();
+    if (pw.trim() === PANITIA_PASSWORD) {
+      setPanitiaUnlocked(true);
+      setShowPw(false);
+      setPw("");
+      setPwError(false);
+    } else {
+      setPwError(true);
+      setTimeout(() => setPwError(false), 2500);
+    }
+  };
 
   return (
     <section
@@ -108,20 +128,97 @@ export const RevealKelompok = () => {
       className="relative overflow-hidden bg-gradient-to-b from-[#4a2170] via-[#43206e] to-[#4a2170] px-6 py-24 sm:py-32"
     >
       <StarField count={40} />
+
+      {/* Akses panitia — gembok subtle di pojok section */}
+      {!revealed && (
+        <div className="absolute right-4 top-4 z-20">
+          <button
+            onClick={() => setShowPw((v) => !v)}
+            data-testid="panitia-lock-button"
+            aria-label="Akses panitia"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/40 transition-colors duration-300 hover:border-white/30 hover:text-white/80"
+          >
+            <Lock className="h-4 w-4" />
+          </button>
+
+          <AnimatePresence>
+            {showPw && (
+              <motion.form
+                onSubmit={submitPw}
+                initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                transition={{ duration: 0.2 }}
+                data-testid="panitia-form"
+                className="glass absolute right-0 mt-2 w-64 rounded-2xl p-4 shadow-2xl"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-widest text-white/70">
+                    <ShieldCheck className="h-3.5 w-3.5 text-[#4cc9f0]" /> Akses Panitia
+                  </span>
+                  <button type="button" onClick={() => setShowPw(false)} aria-label="Tutup" className="text-white/40 hover:text-white">
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+                <div className="relative mt-3">
+                  <KeyRound className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
+                  <input
+                    type="password"
+                    value={pw}
+                    onChange={(e) => setPw(e.target.value)}
+                    placeholder="Password panitia"
+                    autoFocus
+                    data-testid="panitia-input"
+                    className={`w-full rounded-full border bg-white/10 py-2.5 pl-10 pr-3 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-[#4cc9f0] ${
+                      pwError ? "border-[#f72585]" : "border-white/20"
+                    }`}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  data-testid="panitia-submit"
+                  className="mt-3 w-full rounded-full bg-[#4cc9f0] py-2.5 font-heading text-sm font-medium text-[#0A0A1A] transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  Buka Reveal
+                </button>
+                <AnimatePresence>
+                  {pwError && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      data-testid="panitia-error"
+                      className="mt-2 flex items-center gap-1.5 text-xs font-medium text-[#f72585]"
+                    >
+                      <X className="h-3.5 w-3.5" /> Password salah.
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.form>
+            )}
+          </AnimatePresence>
+        </div>
+      )}
+
       <div className="relative z-10 mx-auto max-w-6xl">
         <Reveal>
           <p className="mb-4 text-center text-sm font-medium uppercase tracking-[0.3em] text-[#c05cff]">Reveal Kelompok</p>
           <h2 className="font-heading text-center text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            {time.done ? (
+            {revealed ? (
               <>Ini <span className="aurora-text">angkatanmu</span></>
             ) : (
               <>Siapa <span className="aurora-text">kelompokmu?</span></>
             )}
           </h2>
+          {panitiaUnlocked && !time.done && (
+            <p data-testid="panitia-badge" className="mt-3 flex items-center justify-center gap-1.5 text-xs uppercase tracking-widest text-[#4cc9f0]">
+              <ShieldCheck className="h-3.5 w-3.5" /> Mode panitia — preview
+            </p>
+          )}
         </Reveal>
 
         <AnimatePresence mode="wait">
-          {time.done ? (
+          {revealed ? (
             <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
               <RevealView />
             </motion.div>
