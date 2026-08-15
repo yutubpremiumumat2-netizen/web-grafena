@@ -59,7 +59,7 @@ export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
           )}
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest text-white/60">Minggu {orbit.week}</p>
+          <p className="text-xs uppercase tracking-widest text-white/60">Week {orbit.week}</p>
           <h3 className="font-heading text-lg font-medium leading-tight text-white">{orbit.title}</h3>
         </div>
       </div>

@@ -50,7 +50,7 @@ const LockedView = ({ time }) => (
       <TimeBox value={time.s} label="Detik" />
     </div>
     <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-xs uppercase tracking-widest text-white/50">
-      <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> 54 maba · 7 kelompok
+      <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> 55 maba · 7 kelompok
     </p>
   </div>
 );
