@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Instagram, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { StarField } from "./Decorations";
 
@@ -43,14 +43,6 @@ export const Contact = () => (
             <Instagram className="h-5 w-5" />
             @grafena.himatologika
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a
-            href="mailto:panitia.grafena@gmail.com"
-            data-testid="contact-email-link"
-            className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-7 py-4 font-heading text-base font-medium text-white transition-colors duration-300 hover:border-white/40 hover:bg-white/10"
-          >
-            <Mail className="h-5 w-5" />
-            Kontak Panitia
           </a>
         </div>
       </Reveal>
