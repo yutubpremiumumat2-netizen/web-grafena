@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Lock, Users, Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { StarField, OrbitRing } from "./Decorations";
-import { GROUPS, REVEAL_TARGET } from "../data/groups";
+import { GROUPS, REVEAL_TARGET, TOTAL_MABA } from "../data/groups";
 
 const TARGET_MS = new Date(REVEAL_TARGET).getTime();
 
@@ -50,7 +50,7 @@ const LockedView = ({ time }) => (
       <TimeBox value={time.s} label="Detik" />
     </div>
     <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-xs uppercase tracking-widest text-white/50">
-      <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> 55 maba · 7 kelompok
+      <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> {TOTAL_MABA} maba · {GROUPS.length} kelompok
     </p>
   </div>
 );
@@ -68,7 +68,10 @@ const RevealView = () => (
         style={{ boxShadow: `0 0 40px ${g.glow}44` }}
       >
         <div className="flex items-center justify-between">
-          <h3 className="font-heading text-xl font-semibold text-white">{g.name}</h3>
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.25em] text-white/70">{g.name}</p>
+            <h3 className="font-heading text-xl font-semibold leading-tight text-white">{g.codename}</h3>
+          </div>
           <span className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs text-white">
             <Users className="h-3.5 w-3.5" />
             {g.members.length}
