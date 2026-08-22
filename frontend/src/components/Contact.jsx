@@ -3,7 +3,7 @@ import { Instagram, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { StarField } from "./Decorations";
 
-const ASTRO_FLOAT = "https://customer-assets-lqy194kg.emergentagent.net/job_orbit-unlock/artifacts/8dajwirv_ORBI.png";
+const ASTRO_FLOAT = `${process.env.PUBLIC_URL}/orbi.png`;
 
 export const Contact = () => (
   <section
@@ -19,7 +19,7 @@ export const Contact = () => (
         <motion.img
           src={ASTRO_FLOAT}
           alt="Orbi melambai"
-          className="float-y mx-auto mb-8 w-32 rounded-[2rem] border border-white/15 sm:w-40"
+          className="float-y mx-auto mb-8 w-32 drop-shadow-[0_12px_35px_rgba(247,37,133,0.45)] sm:w-40"
           data-testid="contact-mascot"
         />
         <h2 className="font-heading text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
