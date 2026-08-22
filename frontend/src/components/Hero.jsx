@@ -59,7 +59,7 @@ export const Hero = ({ onStart }) => {
           className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white/80 backdrop-blur"
         >
           <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" />
-          Orientasi Maba TIK D4 Unpad
+          Orientasi Mahasiswa Baru D4 Teknologi Industri Kimia Universitas Padjadjaran
         </motion.div>
 
         <h1 className="font-heading text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">

@@ -63,7 +63,6 @@ export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
           <h3 className="font-heading text-lg font-medium leading-tight text-white">{orbit.title}</h3>
         </div>
       </div>
-      <p className={`mt-2 text-xs text-white/60 ${isLocked ? "opacity-50" : ""}`}>{orbit.dates}</p>
 
       {/* Body */}
       <div className="mt-5">
