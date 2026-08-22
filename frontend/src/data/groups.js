@@ -28,6 +28,7 @@ const RAW = [
       "Asti Alya Putri",
       "Kembang Qeyza Aprilya Djanto",
       "Muhammad Fajar Alamsyah",
+      "Azzam Syahputra Amin",
     ],
   },
   {
@@ -40,7 +41,7 @@ const RAW = [
       "Kenilafayza Hanifah Anggoro",
       "Bagas Afif Praseptiawan",
       "Aulia Nursyarifa",
-      "aliya bahira",
+      "Aliya Bahira",
     ],
   },
   {
@@ -75,7 +76,7 @@ const RAW = [
       "Agnia Kamila Ahmad",
       "Zainab Zafira",
       "Kaindra Veda Arkana",
-      "RENATO IZAZ KRESNA",
+      "Renato Izaz Kresna",
       "Cleantha Fata Marvelancy Greatajaya",
       "Efrizal Pratama",
       "Sulhan Muhammad Fiqha",
@@ -100,7 +101,7 @@ const RAW = [
     members: [
       "Kynan Adila Machda",
       "Teuku Rashieka Rafa Maliqan",
-      "Frisiati amni",
+      "Frisiati Amni",
       "Nadhira Myesha Salsabila",
       "Ahnaf Harits Ramadhani",
       "Siti Qotrun Nada Nursalam",
