@@ -3,7 +3,7 @@
 export const REVEAL_TARGET = "2026-08-28T18:00:00+07:00";
 
 // GANTI: password akses panitia (override tampilan reveal tanpa menunggu countdown)
-export const PANITIA_PASSWORD = "PANITGRAF2026";
+export const PANITIA_PASSWORD = "natriumsulfatanhidrat";
 
 const GRADIENTS = [
   "from-[#4cc9f0] to-[#4361ee]",
