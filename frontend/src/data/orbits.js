@@ -5,7 +5,7 @@ export const ORBITS = [
     week: 1,
     codename: "MERKURIUS",
     password: "MERKURIUS",
-    title: "Gerbang Bumi",
+    title: "Gerbang I – Ignition",
     dates: "5 – 12 September",
     reveal: {
       title: "Outfit Minggu 1 — Bumi",
@@ -18,7 +18,7 @@ export const ORBITS = [
     week: 2,
     codename: "VENUS",
     password: "VENUS",
-    title: "Gerbang Atmosfer",
+    title: "Gerbang II – Liftoff",
     dates: "13 – 19 September",
     reveal: {
       title: "Outfit Minggu 2 — Atmosfer",
@@ -31,7 +31,7 @@ export const ORBITS = [
     week: 3,
     codename: "BUMI",
     password: "BUMI",
-    title: "Gerbang Orbit",
+    title: "Gerbang III – Ascent",
     dates: "20 – 26 September",
     reveal: {
       title: "Outfit Minggu 3 — Orbit",
@@ -44,7 +44,7 @@ export const ORBITS = [
     week: 4,
     codename: "MARS",
     password: "MARS",
-    title: "Gerbang Bulan",
+    title: "Gerbang IV – Atmosfer",
     dates: "27 Sep – 3 Oktober",
     reveal: {
       title: "Outfit Minggu 4 — Mars",
@@ -57,7 +57,7 @@ export const ORBITS = [
     week: 5,
     codename: "JUPITER",
     password: "JUPITER",
-    title: "Gerbang Meteor",
+    title: "Gerbang V – Orbit",
     dates: "4 – 10 Oktober",
     reveal: {
       title: "Outfit Minggu 5 — Jupiter",
@@ -70,7 +70,7 @@ export const ORBITS = [
     week: 6,
     codename: "SATURNUS",
     password: "SATURNUS",
-    title: "Gerbang Galaksi",
+    title: "Gerbang VI – Deep Space",
     dates: "11 – 17 Oktober",
     reveal: {
       title: "Outfit Minggu 6 — Saturnus",
@@ -83,7 +83,7 @@ export const ORBITS = [
     week: 7,
     codename: "URANUS",
     password: "URANUS",
-    title: "Gerbang Nebula",
+    title: "Gerbang VII – Galaksi",
     dates: "18 – 22 Oktober",
     reveal: {
       title: "Outfit Minggu 7 — Uranus",
@@ -96,7 +96,7 @@ export const ORBITS = [
     week: 8,
     codename: "NEPTUNUS",
     password: "NEPTUNUS",
-    title: "Gerbang Bintang",
+    title: "Gerbang VIII – Cosmos",
     dates: "24 Oktober — Puncak",
     reveal: {
       title: "Outfit Minggu 8 — Neptunus",
