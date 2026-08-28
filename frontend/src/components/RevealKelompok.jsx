@@ -67,7 +67,35 @@ const GroupCard = ({ g, revealed, delay }) => (
         {g.members.length}
       </span>
     </div>
-    <ul className="mt-5 space-y-2.5">
+
+    {/* Fasilitator — ikut ter-reveal bersama nama anggota */}
+    <div className="mt-4 flex items-center gap-2 text-xs">
+      <span className="shrink-0 uppercase tracking-widest text-white/60">Fasilitator:</span>
+      <AnimatePresence mode="wait" initial={false}>
+        {revealed ? (
+          <motion.span
+            key="fasil"
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="font-medium text-white/90"
+            data-testid={`kelompok-${g.id}-fasil`}
+          >
+            {g.fasil}
+          </motion.span>
+        ) : (
+          <motion.span
+            key="fasil-skel"
+            exit={{ opacity: 0 }}
+            aria-hidden="true"
+            data-testid={`kelompok-${g.id}-fasil-skeleton`}
+            className="skeleton-bar block h-2.5 w-24 rounded-full"
+          />
+        )}
+      </AnimatePresence>
+    </div>
+
+    <ul className="mt-4 space-y-2.5">
       {g.members.map((m, idx) => (
         <li key={idx} className="flex min-h-[24px] items-center gap-3 text-sm text-white/90">
           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/25 text-[11px] font-medium tabular-nums">

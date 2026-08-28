@@ -32,7 +32,7 @@ export const Mascot = () => (
           Halo, aku <span className="aurora-text">Orbi</span>!
         </h2>
         <p className="mt-6 text-base leading-relaxed text-white/75">
-          Astronot chibi ini akan jadi pemandu perjalananmu sepanjang GRAFENA 2026. Ia menemani
+          Astronot chibi ini akan jadi pemandu perjalananmu sepanjang Grafena 2026. Ia menemani
           setiap maba melintasi 8 gerbang orbit — dari peluncuran pertama hingga titik terjauh
           di luar angkasa.
         </p>

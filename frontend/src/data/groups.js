@@ -20,6 +20,7 @@ const GLOWS = ["#4cc9f0", "#4361ee", "#7209b7", "#b5179e", "#20b2aa", "#9370db",
 const RAW = [
   {
     codename: "ELECTRA",
+    fasil: "Mia & Artur",
     members: [
       "Nafisah Zulaikha Putri",
       "Johanes Maheza Putra",
@@ -33,6 +34,7 @@ const RAW = [
   },
   {
     codename: "ASTER",
+    fasil: "Senja & Arash",
     members: [
       "Helmi Satria Wirhadinata",
       "Raisha Sabrina Az Zahra",
@@ -46,6 +48,7 @@ const RAW = [
   },
   {
     codename: "CENTAURI",
+    fasil: "Orin & Lila",
     members: [
       "Salsabila Rahmah Hafid",
       "Hammda Fayuta",
@@ -59,6 +62,7 @@ const RAW = [
   },
   {
     codename: "CANOPUS",
+    fasil: "Bebii & Yasa",
     members: [
       "Muhamad Raadhi Djauhar",
       "Calya Zain Zerlina",
@@ -72,6 +76,7 @@ const RAW = [
   },
   {
     codename: "ALTAIR",
+    fasil: "Ise & Nanda",
     members: [
       "Agnia Kamila Ahmad",
       "Zainab Zafira",
@@ -85,6 +90,7 @@ const RAW = [
   },
   {
     codename: "CAPELLA",
+    fasil: "Olel & Dafid",
     members: [
       "Farrassabiq Hadya Ichsan",
       "Kirana Farasdina",
@@ -98,6 +104,7 @@ const RAW = [
   },
   {
     codename: "ORION",
+    fasil: "Enji & Dzee",
     members: [
       "Kynan Adila Machda",
       "Teuku Rashieka Rafa Maliqan",
@@ -115,6 +122,7 @@ export const GROUPS = RAW.map((g, i) => ({
   id: i + 1,
   name: `Kelompok ${i + 1}`,
   codename: g.codename,
+  fasil: g.fasil,
   gradient: GRADIENTS[i],
   glow: GLOWS[i],
   members: g.members,
