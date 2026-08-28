@@ -219,7 +219,7 @@ export const RevealKelompok = () => {
             )}
           </h2>
           <p className="mt-5 flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-white/50">
-            <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> 56 maba · {GROUPS.length} kelompok
+            <Sparkles className="h-3.5 w-3.5 text-[#4cc9f0]" /> 56 mahasiswa · {GROUPS.length} kelompok
           </p>
           {panitiaUnlocked && !time.done && (
             <p data-testid="panitia-badge" className="mt-3 flex items-center justify-center gap-1.5 text-xs uppercase tracking-widest text-[#4cc9f0]">
