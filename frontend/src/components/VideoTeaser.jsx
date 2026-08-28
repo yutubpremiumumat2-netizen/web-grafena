@@ -6,7 +6,7 @@ import { StarField, OrbitRing } from "./Decorations";
 
 // === GANTI LINK REELS DI SINI ===
 // Cukup ubah nilai `url` (format: https://www.instagram.com/reel/XXXXXXXXX/)
-const TEASER_URL = ""; // TODO: link reel Teaser GRAFENA 2026 (menyusul)
+const TEASER_URL = "https://www.instagram.com/reel/Dca6TqnK6En/"; // link reel Teaser GRAFENA 2026
 const AFTERMOVIE_URL = "https://www.instagram.com/reel/DbDj1vMKhF5/";
 
 const REELS = [

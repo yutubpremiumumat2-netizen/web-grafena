@@ -3,7 +3,7 @@ import { StarField } from "./Decorations";
 import { Users, Sparkles, Rocket } from "lucide-react";
 
 const chapters = [
-  { n: "01", icon: Rocket, title: "Sebuah Peluncuran", text: "GRAFENA 2026 adalah acara orientasi mahasiswa baru program studi Teknologi Industri Kimia (TIK) D4 Universitas Padjadjaran." },
+  { n: "01", icon: Rocket, title: "Sebuah Peluncuran", text: "Grafena 2026 adalah acara orientasi mahasiswa baru program studi Teknologi Industri Kimia (TIK) D4 Universitas Padjadjaran." },
   { n: "02", icon: Users, title: "56 Penjelajah", text: "Dirancang untuk 56 mahasiswa baru TIK D4. Setiap maba memulai perjalanan ini sendiri-sendiri, dari titik yang berbeda." },
   { n: "03", icon: Sparkles, title: "Satu Angkatan", text: "Tujuannya satu: membangun kebersamaan. Selama 8 pekan, jarak dari Bumi ke luar angkasa menjadi metafora perjalanan kalian menjadi satu angkatan yang utuh." },
 ];
