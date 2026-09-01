@@ -23,7 +23,7 @@ export const ORBITS = [
     ],
     reveal: {
       title: "Starterpack Gerbang I",
-      desc: "Ini starterpack perlengkapanmu untuk memulai perjalanan. (Gambar asli menyusul)",
+      desc: "Ini starterpack perlengkapanmu untuk memulai perjalanan.",
     },
     gradient: "from-[#5b8def] to-[#4cc9f0]",
     glow: "#4cc9f0",
