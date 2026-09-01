@@ -1,8 +1,8 @@
 // GRAFENA 2026 — Kunci Orbit data
 // NOTE: Passwords are placeholders (planet names). Ganti dengan kata sandi asli tiap minggu.
 
-// GANTI: gambar starterpack Gerbang I (letakkan file di /public lalu ubah path di bawah)
-export const STARTERPACK_IMAGE = "/starterpack-placeholder.svg";
+// GANTI: gambar starterpack Gerbang I (letakkan file di /public/starterpack lalu sesuaikan path)
+export const STARTERPACK_IMAGES = ["/starterpack/1.png", "/starterpack/2.png", "/starterpack/3.png"];
 
 export const ORBITS = [
   {
@@ -11,7 +11,7 @@ export const ORBITS = [
     password: "GALAKSI BIMA SAKTI",
     title: "Gerbang I – Ignition",
     dates: "5 – 12 September",
-    starterpackImage: STARTERPACK_IMAGE,
+    starterpackImages: STARTERPACK_IMAGES,
     clues: [
       { group: "Kelompok 1", text: "Kawasan di mana lembar lembar keadilan dirumuskan, undang undang dipelajari" },
       { group: "Kelompok 2", text: "Tempat dimana kunci sebuah hubungan" },

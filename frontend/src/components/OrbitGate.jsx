@@ -1,6 +1,83 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, Unlock, Check, X, KeyRound, MapPin } from "lucide-react";
+import { Lock, Unlock, Check, X, KeyRound, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
+
+const spVariants = {
+  enter: (dir) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir) => ({ x: dir > 0 ? -60 : 60, opacity: 0 }),
+};
+
+const StarterpackCarousel = ({ images, week }) => {
+  const [[i, dir], setPage] = useState([0, 0]);
+  const paginate = (nd) => setPage(([c]) => [(c + nd + images.length) % images.length, nd]);
+  const goTo = (idx) => setPage(([c]) => [idx, idx > c ? 1 : -1]);
+
+  return (
+    <div className="relative" data-testid={`orbit-starterpack-${week}`}>
+      <div className="relative aspect-[1414/2000] w-full overflow-hidden rounded-2xl border border-white/25 bg-white/10">
+        <AnimatePresence mode="wait" custom={dir}>
+          <motion.img
+            key={i}
+            src={images[i]}
+            custom={dir}
+            variants={spVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(e, { offset }) => {
+              if (offset.x < -60) paginate(1);
+              else if (offset.x > 60) paginate(-1);
+            }}
+            draggable={false}
+            alt={`Starterpack Week 1 — ${i + 1}`}
+            data-testid={`orbit-sp-img-${week}`}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </AnimatePresence>
+
+        <button
+          type="button"
+          onClick={() => paginate(-1)}
+          aria-label="Gambar sebelumnya"
+          data-testid={`orbit-sp-prev-${week}`}
+          className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#0A0A1A]/60 text-white backdrop-blur transition-all duration-300 hover:scale-110 hover:border-[#4cc9f0]"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          onClick={() => paginate(1)}
+          aria-label="Gambar berikutnya"
+          data-testid={`orbit-sp-next-${week}`}
+          className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#0A0A1A]/60 text-white backdrop-blur transition-all duration-300 hover:scale-110 hover:border-[#4cc9f0]"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+
+      <div className="mt-3 flex items-center justify-center gap-2" data-testid={`orbit-sp-dots-${week}`}>
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            type="button"
+            onClick={() => goTo(idx)}
+            aria-label={`Ke gambar ${idx + 1}`}
+            data-testid={`orbit-sp-dot-${week}-${idx}`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              idx === i ? "w-6 bg-[#4cc9f0]" : "w-2 bg-white/25 hover:bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
   const [value, setValue] = useState("");
@@ -75,13 +152,8 @@ export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
               transition={{ duration: 0.5 }}
               data-testid={`orbit-reveal-${orbit.week}`}
             >
-              {orbit.starterpackImage ? (
-                <img
-                  src={orbit.starterpackImage}
-                  alt={`Starterpack ${orbit.title}`}
-                  data-testid={`orbit-starterpack-${orbit.week}`}
-                  className="w-full rounded-2xl border border-white/25 object-cover"
-                />
+              {orbit.starterpackImages ? (
+                <StarterpackCarousel images={orbit.starterpackImages} week={orbit.week} />
               ) : (
                 <div className="flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-white/25 bg-white/15">
                   <div className="text-center">
