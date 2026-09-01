@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, Unlock, Check, X, KeyRound } from "lucide-react";
+import { Lock, Unlock, Check, X, KeyRound, MapPin } from "lucide-react";
 
 export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
   const [value, setValue] = useState("");
@@ -75,14 +75,23 @@ export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
               transition={{ duration: 0.5 }}
               data-testid={`orbit-reveal-${orbit.week}`}
             >
-              <div className="flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-white/25 bg-white/15">
-                <div className="text-center">
-                  <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/25">
-                    <Check className="h-6 w-6 text-white" />
+              {orbit.starterpackImage ? (
+                <img
+                  src={orbit.starterpackImage}
+                  alt={`Starterpack ${orbit.title}`}
+                  data-testid={`orbit-starterpack-${orbit.week}`}
+                  className="w-full rounded-2xl border border-white/25 object-cover"
+                />
+              ) : (
+                <div className="flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-white/25 bg-white/15">
+                  <div className="text-center">
+                    <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/25">
+                      <Check className="h-6 w-6 text-white" />
+                    </div>
+                    <p className="px-4 text-xs text-white/80">[ Placeholder foto outfit ]</p>
                   </div>
-                  <p className="px-4 text-xs text-white/80">[ Placeholder foto outfit ]</p>
                 </div>
-              </div>
+              )}
               <h4 className="font-heading mt-4 text-base font-medium text-white">{orbit.reveal.title}</h4>
               <p className="mt-1 text-sm leading-relaxed text-white/85">{orbit.reveal.desc}</p>
             </motion.div>
@@ -94,6 +103,23 @@ export const OrbitGate = ({ orbit, status, onUnlock, index }) => {
               animate={{ opacity: 1 }}
               className="space-y-3"
             >
+              {orbit.clues && (
+                <div
+                  className="rounded-2xl border border-white/15 bg-white/[0.04] p-4"
+                  data-testid={`orbit-clues-${orbit.week}`}
+                >
+                  <p className="mb-2 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-widest text-[#4cc9f0]">
+                    <MapPin className="h-3.5 w-3.5" /> Clue Tempat
+                  </p>
+                  <ul className="space-y-1.5">
+                    {orbit.clues.map((c, i) => (
+                      <li key={i} className="text-xs leading-relaxed text-white/70">
+                        <span className="font-semibold text-white/90">{c.group}:</span> "{c.text}"
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <p className="text-sm text-white/70">Masukkan kata sandi orbit untuk membuka gerbang ini.</p>
               <div className="relative">
                 <KeyRound className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />

@@ -1,15 +1,29 @@
 // GRAFENA 2026 — Kunci Orbit data
 // NOTE: Passwords are placeholders (planet names). Ganti dengan kata sandi asli tiap minggu.
+
+// GANTI: gambar starterpack Gerbang I (letakkan file di /public lalu ubah path di bawah)
+export const STARTERPACK_IMAGE = "/starterpack-placeholder.svg";
+
 export const ORBITS = [
   {
     week: 1,
     codename: "MERKURIUS",
-    password: "MERKURIUS",
+    password: "GALAKSI BIMA SAKTI",
     title: "Gerbang I – Ignition",
     dates: "5 – 12 September",
+    starterpackImage: STARTERPACK_IMAGE,
+    clues: [
+      { group: "Kelompok 1", text: "Kawasan di mana lembar lembar keadilan dirumuskan, undang undang dipelajari" },
+      { group: "Kelompok 2", text: "Tempat dimana kunci sebuah hubungan" },
+      { group: "Kelompok 3", text: "Tempat dimana mahasiswa/i bisa bebas berekspresi dengan penampilan" },
+      { group: "Kelompok 4", text: "Bukan sawah, tetapi di sinilah hasil bumi diolah melalui teknologi hingga bernilai lebih tinggi." },
+      { group: "Kelompok 5", text: "Bangunan yang dihuni oleh para calon konsultan" },
+      { group: "Kelompok 6", text: "Fakultas dengan kode npm 14" },
+      { group: "Kelompok 7", text: "Bukan dokter ikan, tetapi memahami kehidupannya" },
+    ],
     reveal: {
-      title: "Outfit Minggu 1 — Bumi",
-      desc: "Kenakan atasan putih polos & bawahan gelap. Bawa name tag angkatanmu. Ini titik keberangkatanmu.",
+      title: "Starterpack Gerbang I",
+      desc: "Ini starterpack perlengkapanmu untuk memulai perjalanan. (Gambar asli menyusul)",
     },
     gradient: "from-[#5b8def] to-[#4cc9f0]",
     glow: "#4cc9f0",
